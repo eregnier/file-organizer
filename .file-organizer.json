@@ -1,0 +1,281 @@
+{
+    "folder": "/tmp/tst",
+    "files_types": [
+        {
+            "extension": "noext",
+            "folder": "noext"
+        },
+        {
+            "extension": "unknown",
+            "folder": "unknown"
+        },
+        {
+            "extension": "jpg",
+            "folder": "images"
+        },
+        {
+            "extension": "jpeg",
+            "folder": "images"
+        },
+        {
+            "extension": "png",
+            "folder": "images"
+        },
+        {
+            "extension": "gif",
+            "folder": "images"
+        },
+        {
+            "extension": "svg",
+            "folder": "images"
+        },
+        {
+            "extension": "ico",
+            "folder": "images"
+        },
+        {
+            "extension": "mp3",
+            "folder": "music"
+        },
+        {
+            "extension": "flac",
+            "folder": "music"
+        },
+        {
+            "extension": "wav",
+            "folder": "music"
+        },
+        {
+            "extension": "ogg",
+            "folder": "music"
+        },
+        {
+            "extension": "json",
+            "folder": "data"
+        },
+        {
+            "extension": "xml",
+            "folder": "data"
+        },
+        {
+            "extension": "csv",
+            "folder": "data"
+        },
+        {
+            "extension": "yml",
+            "folder": "data"
+        },
+        {
+            "extension": "yaml",
+            "folder": "data"
+        },
+        {
+            "extension": "avro",
+            "folder": "data"
+        },
+        {
+            "extension": "txt",
+            "folder": "data"
+        },
+        {
+            "extension": "lock",
+            "folder": "data"
+        },
+        {
+            "extension": "patch",
+            "folder": "data"
+        },
+        {
+            "extension": "pub",
+            "folder": "security"
+        },
+        {
+            "extension": "dat",
+            "folder": "data"
+        },
+        {
+            "extension": "tfstate",
+            "folder": "terraform"
+        },
+        {
+            "extension": "tmp",
+            "folder": "tmp"
+        },
+        {
+            "extension": "sql",
+            "folder": "code"
+        },
+        {
+            "extension": "html",
+            "folder": "code"
+        },
+        {
+            "extension": "sh",
+            "folder": "code"
+        },
+        {
+            "extension": "py",
+            "folder": "code"
+        },
+        {
+            "extension": "js",
+            "folder": "code"
+        },
+        {
+            "extension": "ts",
+            "folder": "code"
+        },
+        {
+            "extension": "vue",
+            "folder": "code"
+        },
+        {
+            "extension": "go",
+            "folder": "code"
+        },
+        {
+            "extension": "java",
+            "folder": "code"
+        },
+        {
+            "extension": "ino",
+            "folder": "code"
+        },
+        {
+            "extension": "zip",
+            "folder": "archive"
+        },
+        {
+            "extension": "xz",
+            "folder": "archive"
+        },
+        {
+            "extension": "tgz",
+            "folder": "archive"
+        },
+        {
+            "extension": "gz",
+            "folder": "archive"
+        },
+        {
+            "extension": "tar",
+            "folder": "archive"
+        },
+        {
+            "extension": "7z",
+            "folder": "archive"
+        },
+        {
+            "extension": "rar",
+            "folder": "archive"
+        },
+        {
+            "extension": "deb",
+            "folder": "app"
+        },
+        {
+            "extension": "whl",
+            "folder": "app"
+        },
+        {
+            "extension": "dmg",
+            "folder": "app"
+        },
+        {
+            "extension": "exe",
+            "folder": "app"
+        },
+        {
+            "extension": "bin",
+            "folder": "app"
+        },
+        {
+            "extension": "jar",
+            "folder": "app"
+        },
+        {
+            "extension": "iso",
+            "folder": "iso"
+        },
+        {
+            "extension": "gcode",
+            "folder": "print3D"
+        },
+        {
+            "extension": "stl",
+            "folder": "print3D"
+        },
+        {
+            "extension": "obj",
+            "folder": "print3D"
+        },
+        {
+            "extension": "mtl",
+            "folder": "print3D"
+        },
+        {
+            "extension": "upl",
+            "folder": "misc"
+        },
+        {
+            "extension": "xlsx",
+            "folder": "document"
+        },
+        {
+            "extension": "xls",
+            "folder": "document"
+        },
+        {
+            "extension": "ps",
+            "folder": "document"
+        },
+        {
+            "extension": "pptx",
+            "folder": "document"
+        },
+        {
+            "extension": "doc",
+            "folder": "document"
+        },
+        {
+            "extension": "docx",
+            "folder": "document"
+        },
+        {
+            "extension": "ods",
+            "folder": "document"
+        },
+        {
+            "extension": "odt",
+            "folder": "document"
+        },
+        {
+            "extension": "pdf",
+            "folder": "document"
+        },
+        {
+            "extension": "torrent",
+            "folder": "torrent"
+        },
+        {
+            "extension": "bak",
+            "folder": "backup"
+        },
+        {
+            "extension": "bak",
+            "folder": "backup"
+        },
+        {
+            "extension": "avi",
+            "folder": "video"
+        },
+        {
+            "extension": "mp4",
+            "folder": "video"
+        },
+        {
+            "extension": "mkv",
+            "folder": "video"
+        }
+    ]
+}
