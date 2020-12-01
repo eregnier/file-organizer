@@ -19,8 +19,9 @@ type FileType struct {
 //Config : General configuration for this tool
 type Config struct {
 	FilesTypes []FileType `json:"files_types"`
+	Folder     string     `json:"folder"`
 	typeMap    map[string]FileType
-	Folder     string `json:"folder"`
+	FoldersSet map[string]bool
 }
 
 func main() {
@@ -44,9 +45,14 @@ func order(config Config) {
 	if err != nil {
 		log.Fatal(err)
 	}
+	targetFolder := fmt.Sprintf("%s/folders", config.Folder)
+	if _, err := os.Stat(targetFolder); os.IsNotExist(err) {
+		os.Mkdir(targetFolder, 0755)
+	}
+
 	for _, file := range files {
+		name := file.Name()
 		if !file.IsDir() {
-			name := file.Name()
 			fmt.Println("processing", name)
 
 			var ext string
@@ -57,6 +63,19 @@ func order(config Config) {
 				ext = "noext"
 			}
 			moveFile(config, name, ext)
+		} else {
+			moveFolder(config, name)
+		}
+	}
+}
+
+func moveFolder(config Config, name string) {
+	if name != "folders" && config.FoldersSet[name] != true {
+		oldPath := fmt.Sprintf("%s/%s", config.Folder, name)
+		newPath := fmt.Sprintf("%s/folders/%s", config.Folder, name)
+		err := os.Rename(oldPath, newPath)
+		if err != nil {
+			log.Fatal(err)
 		}
 	}
 }
@@ -82,8 +101,10 @@ func moveFile(config Config, name string, ext string) {
 
 func parseFileType(config Config) Config {
 	config.typeMap = make(map[string]FileType)
+	config.FoldersSet = make(map[string]bool)
 	for _, ft := range config.FilesTypes {
 		config.typeMap[ft.Extension] = ft
+		config.FoldersSet[ft.Folder] = true
 	}
 	return config
 }
