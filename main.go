@@ -8,6 +8,7 @@ import (
 	"os"
 	"os/user"
 	"strings"
+	"time"
 )
 
 //FileType : Files types
@@ -73,6 +74,14 @@ func moveFolder(config Config, name string) {
 	if name != "folders" && config.FoldersSet[name] != true {
 		oldPath := fmt.Sprintf("%s/%s", config.Folder, name)
 		newPath := fmt.Sprintf("%s/folders/%s", config.Folder, name)
+		if _, err := os.Stat(newPath); err == nil {
+			newPath = fmt.Sprintf(
+				"%s/folders/%s-%s",
+				config.Folder,
+				time.Now().Format("20060102150405"),
+				name,
+			)
+		}
 		err := os.Rename(oldPath, newPath)
 		if err != nil {
 			log.Fatal(err)
@@ -88,6 +97,15 @@ func moveFile(config Config, name string, ext string) {
 	if folder != "" {
 		oldPath := fmt.Sprintf("%s/%s", config.Folder, name)
 		newPath := fmt.Sprintf("%s/%s/%s", config.Folder, folder, name)
+		if _, err := os.Stat(newPath); err == nil {
+			newPath = fmt.Sprintf(
+				"%s/%s/%s-%s",
+				config.Folder,
+				folder,
+				time.Now().Format("20060102150405"),
+				name,
+			)
+		}
 		targetFolder := fmt.Sprintf("%s/%s", config.Folder, folder)
 		if _, err := os.Stat(targetFolder); os.IsNotExist(err) {
 			os.Mkdir(targetFolder, 0755)

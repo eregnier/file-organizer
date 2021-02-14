@@ -66,6 +66,10 @@
             "folder": "data"
         },
         {
+            "extension": "log",
+            "folder": "logs"
+        },
+        {
             "extension": "yaml",
             "folder": "data"
         },
