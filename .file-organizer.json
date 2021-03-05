@@ -222,6 +222,14 @@
             "folder": "misc"
         },
         {
+            "extension": "md",
+            "folder": "document"
+        },
+        {
+            "extension": "rst",
+            "folder": "document"
+        },
+        {
             "extension": "xlsx",
             "folder": "document"
         },
